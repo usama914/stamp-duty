@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Mitr:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color-light: #d1eafe; /* Light variant */
+  --primary-color-dark: #015596; /* Dark variant */
+  --primary-color-gray: #ebebeb; /* gray variant */
+}
+
+.primary-btn,
+.secondary-btn {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5rem;
+  border-width: 1px;
+  border-radius: 50px !important;
+  cursor: pointer;
+}
+
+.primary-btn {
+  color: white;
+  background-color: var(--primary-color-dark) !important;
+}
+.secondary-btn {
+  background-color: var(--primary-color-light) !important;
+  color: black;
+}
