@@ -1,7 +1,7 @@
 <template>
   <section
     id="faqs"
-    class="mx-auto flex flex-col w-full lg:max-w-screen-xl mb-[5rem] px-4 lg:px-2"
+    class="mx-auto flex flex-col w-full lg:max-w-screen-xl mb-[5rem] px-4 lg:px-8"
   >
     <div class="space-y-5">
       <h1
@@ -22,13 +22,25 @@
             tab.title
           }}</AccordionHeader>
           <AccordionContent class="!bg-neutral-300">
-            <p class="m-0 !text-black">{{ tab.content }}</p>
+            <div v-if="tab.list && tab.list.length">
+              <p class="m-0 !text-black">{{ tab.content }}</p>
+              <ul class="list-disc ml-6 mt-2">
+                <li v-for="(item, index) in tab.list" :key="index">
+                  <p class="!text-black">
+                    {{ item }}
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <p v-else class="m-0 !text-black">{{ tab.content }}</p>
           </AccordionContent>
         </AccordionPanel>
       </Accordion>
     </div>
     <div class="flex w-full md:w-3/5">
-      <NuxtLink class="primary-btn w-full"> CHECK IF I CAN CLAIM </NuxtLink>
+      <NuxtLink class="primary-btn w-full uppercase">
+        {{ buttonText }}</NuxtLink
+      >
     </div>
   </section>
 </template>
@@ -39,6 +51,7 @@ import { ref } from "vue";
 interface Tab {
   title: string;
   content: string;
+  list?: string[];
   value: string;
 }
 
@@ -51,13 +64,25 @@ defineProps({
     type: String,
     required: true,
   },
+  buttonText: {
+    type: String,
+    required: true,
+  },
 });
 
 const tabs = ref<Tab[]>([
   {
     title: "What is Stamp Duty Land Tax?",
     content:
-      "Stamp duty land tax - SDLT is a tax targeted at buyers of land, property and rights over property (like leases). You pay stamp duty when you purchase property, or a piece of land. Not all purchases attract stamp duty. The rules over when you have to pay stamp duty and how much you must pay are extremely complicated. Generally, the following 6 factors will affect whether and how much you have to pay",
+      "Stamp duty land tax - SDLT is a tax targeted at buyers of land, property and rights over property (like leases). You pay stamp duty when you purchase property, or a piece of land. Not all purchases attract stamp duty. The rules over when you have to pay stamp duty and how much you must pay are extremely complicated. Generally, the following 6 factors will affect whether and how much you have to pay:",
+    list: [
+      "Whether the land/property is used residentially or non-residentially",
+      "How much you paid for the land",
+      "Who you are: an individual, a company, or a partnership",
+      "Where you live, if you are a UK resident or non-resident",
+      "Why you bought the land/property",
+      "Whether you have bought anything else in a related transaction",
+    ],
     value: "0",
   },
   {

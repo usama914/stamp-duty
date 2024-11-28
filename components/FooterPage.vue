@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-300 text-white md:p-0 mt-auto">
     <div
-      class="w-full flex justify-start flex-col lg:max-w-screen-xl mx-auto p-4 lg:px-2"
+      class="w-full flex justify-start flex-col lg:max-w-screen-xl mx-auto p-4 lg:px-8"
     >
       <ul>
         <li v-for="point in points" :key="point">
@@ -16,7 +16,7 @@
             :href="link.site"
             class="text-black font-bold underline hover:text-blue-600"
             target="_blank"
-            rel=""
+            rel="  "
           >
             {{ link.name }}
           </a>

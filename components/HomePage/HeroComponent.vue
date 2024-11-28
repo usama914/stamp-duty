@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-col justify-between items-center lg:gap-[5rem] lg:flex-row lg:max-w-screen-xl px-4 lg:px-2 py-8 lg:py-16 mx-auto"
+    class="flex flex-col justify-between items-center lg:gap-[5rem] lg:flex-row lg:max-w-screen-xl px-4 lg:px-8 py-8 lg:py-16 mx-auto"
   >
     <!-- Left Content -->
     <div class="w-full sm:space-y-6 lg:w-4/6 space-y-4">
@@ -20,7 +20,7 @@
         <ul class="space-y-2">
           <li v-for="point in points" :key="point">
             <span
-              class="flex items-baseline gap-2 text-sm sm:text-base md:text-lg rounded bg-primary-light mb-2 p-2 lg:px-2"
+              class="flex items-baseline gap-2 text-sm sm:text-base md:text-lg rounded bg-primary-light mb-2 p-2 lg:px-8"
             >
               <div>
                 <Icon icon="line-md:arrow-right" />
@@ -33,7 +33,7 @@
           <span class="text-primary-dark text-sm sm:text-base">
             {{ claimMessage }}
           </span>
-          <NuxtLink class="primary-btn"> {{ buttonText }} </NuxtLink>
+          <NuxtLink class="primary-btn uppercase"> {{ buttonText }} </NuxtLink>
         </div>
       </div>
     </div>

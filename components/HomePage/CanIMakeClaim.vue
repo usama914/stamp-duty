@@ -1,10 +1,10 @@
 <template>
   <section
     id="can-i-make-a-claim"
-    class="bg-primary-dark mb-16 lg:mb-20 px-4 lg:px-2"
+    class="bg-primary-dark mb-16 lg:mb-20 "
   >
     <div
-      class="w-full flex flex-col justify-between items-center lg:flex-row lg:max-w-screen-xl lg:gap-[5rem] lg:items-end md:space-y-0 space-y-6 mx-auto"
+      class="w-full flex flex-col justify-between items-center lg:flex-row lg:max-w-screen-xl lg:gap-[5rem] lg:items-end md:space-y-0 space-y-6 mx-auto px-4 lg:px-8"
     >
       <!-- Left Content -->
       <div
@@ -32,7 +32,7 @@
             </span>
           </li>
         </ul>
-        <NuxtLink class="secondary-btn w-full"> {{ buttonText }} </NuxtLink>
+        <NuxtLink class="secondary-btn w-full uppercase"> {{ buttonText }} </NuxtLink>
       </div>
 
       <!-- Right Image -->

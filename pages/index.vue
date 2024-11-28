@@ -16,7 +16,10 @@
       :button-text="claimButtonText"
       :image-src="claimImageSrc"
     />
-    <FAQPage :title="faqTitle" :description="faqDescription" />
+    <FAQPage 
+    :title="faqTitle" 
+    :button-text="faqButtonText"
+    :description="faqDescription" />
   </div>
 </template>
 
@@ -25,7 +28,7 @@ import HeroComponent from "~/components/HomePage/HeroComponent.vue";
 import CanIMakeClaim from "~/components/HomePage/CanIMakeClaim.vue";
 import FAQPage from "~/components/HomePage/FAQPage.vue";
 
-// ----------- components/HomePage/HeroComponent.vue
+// Data for Hero Component
 
 const heroLogoSrc = "/images/home-logo.png";
 const heroHeadline = `
@@ -46,10 +49,10 @@ const heroPoints = [
 ];
 const heroClaimMessage =
   "Use our free claim checker to find out if you qualify for a claim";
-const heroButtonText = "CHECK IF I CAN CLAIM";
+const heroButtonText = "Check if I can claim";
 const heroImageSrc = "/images/hero-img.svg";
 
-// ----------- components/HomePage/CanIMakeClaim.vue 
+// Data for CanIMakeClaim Component
 const claimHeadline = "Can I make a claim?";
 const claimDescription = `
   If you can answer yes to the questions below you could be entitled
@@ -61,14 +64,16 @@ const claimPoints = [
   "You can provide pictures of the property evidencing the issues at the point of purchase",
   "Or you purchased the property through Probate",
 ];
-const claimButtonText = "CHECK IF I CAN CLAIM";
+const claimButtonText = "Check if I can claim";
 const claimImageSrc = "/images/claim-refund.png";
 
-// ----------- components/HomePage/FAQPage.vue
+// ----------- Data for FAQ component
 const faqTitle = "FAQs";
 const faqDescription = `
   Below are some of the most common questions asked about Stamp Duty Land
   Tax (SDLT) <br />
   and the process of making a claim.
 `;
+const faqButtonText = "Check if I can claim";
+
 </script>
