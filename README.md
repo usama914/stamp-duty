@@ -40,16 +40,6 @@ To use this Nuxt Skeleton project:
    npm run dev
    ```
 
-## Dependencies Installation (if you need to install manually)
 
-### PrimeVue v4.0.7
-
-PrimeVue is a rich set of open source UI Components for Vue.
-
-```bash
-npm install primevue@4.0.7
-npm install --save-dev @primevue/nuxt-module@4.0.7
-npm install @primevue/themes@4.0.7
-```
 
 Happy coding!
