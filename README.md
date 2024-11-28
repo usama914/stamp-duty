@@ -1,9 +1,3 @@
-# Welcome to Nuxt Skeleton
-
-[![Nuxt](https://img.shields.io/badge/Nuxt-3.13.2-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://nuxt.com/docs)
-
-This repository is created for our team to quickly build websites without the worry of installing all the dependencies manually. It provides a solid foundation with pre-installed and configured essential tools and libraries.
-
 ## Included Dependencies
 
 [![Nuxt](https://img.shields.io/badge/Nuxt-3.13.2-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://nuxt.com/docs)
@@ -14,38 +8,6 @@ This repository is created for our team to quickly build websites without the wo
 [![Iconify](https://img.shields.io/badge/Iconify-4.1.2-1769AA?style=for-the-badge&logo=iconify&logoColor=white)](https://icon-sets.iconify.design/ic/)
 [![Nuxt Fonts](https://img.shields.io/badge/Nuxt_Fonts-0.8.0-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://github.com/nuxt-modules/fonts)
 [![Nuxt Image](https://img.shields.io/badge/Nuxt_Image-1.8.0-00DC82?style=for-the-badge&logo=nuxt.js&logoColor=white)](https://image.nuxt.com/)
-
-## Folder Structure
-
-Our Nuxt Skeleton project follows a standard Nuxt.js directory structure:
-
-```
-nuxt-skeleton/
-├── app.vue
-├── assets/
-│ └── css/
-│ └── main.css
-├── components/
-│ ├── HeaderComponent.vue
-│ └── FooterComponent.vue
-├── layouts/
-│ └── default.vue
-├── pages/
-│ ├── index.vue
-│ └── about.vue
-├── plugins/
-│ └── iconify.ts
-├── public/
-├── server/
-├── nuxt.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-├── package.json
-├── package-lock.json
-└── node_modules/
-```
-
-This structure provides a clear separation of concerns and follows Nuxt.js best practices for organizing your project files.
 
 ## Getting Started
 
