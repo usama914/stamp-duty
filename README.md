@@ -11,7 +11,6 @@
 
 ## Getting Started
 
-To use this Nuxt Skeleton project:
 
 1. Clone this repository:
    
