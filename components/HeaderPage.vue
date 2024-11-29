@@ -6,7 +6,7 @@
       <NuxtLink to="/">
         <NuxtImg width="70" src="/images/stamp-logo.png" />
       </NuxtLink>
-      <nav>
+      <nav v-if="!showLinks">
         <ul class="flex space-x-6 lg:space-x-10">
           <li
             v-for="link in links"
@@ -39,6 +39,9 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+
+// Define the links
 const links = [
   { name: "Can I make a claim?", id: "can-i-make-a-claim", hideOnMobile: true },
   { name: "FAQs", id: "faqs", hideOnMobile: true },
@@ -50,10 +53,15 @@ const links = [
   },
 ];
 
+// Function to scroll to a section
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+// Showing links only on the "/" route
+const route = useRoute();
+const showLinks = computed(() => route.path === "/booking-form");
 </script>

@@ -2,11 +2,21 @@
   <div class="flex flex-col space-y-4">
     <div>
       <label for="email">Email</label>
-      <InputText id="email" v-model="formData.email" class="w-full" />
+      <InputText
+        id="email"
+        placeholder="Enter email address"
+        v-model="formData.email"
+        class="w-full"
+      />
     </div>
-    <div>
+    <div class="flex flex-col">
       <label for="phone">Phone</label>
-      <InputText id="phone" v-model="formData.phone" class="w-full" />
+      <InputMask
+        id="basic"
+        v-model="formData.phone"
+        mask="(+44) - 9999999999"
+        placeholder="(+44) - 9999999999"
+      />
     </div>
     <div>
       <label for="phone">Best Time to Call</label>
@@ -17,19 +27,14 @@
         class="w-full"
       />
     </div>
-    <!-- <div>
-      <label for="call-time">Best Time to Call</label>
-      <Dropdown
-        id="call-time"
-        :options="timeOptions"
-         optionLabel="label"
-        v-model="formData.callTime"
-        class="w-full"
-      />
-    </div> -->
     <div>
       <label for="postcode">Postcode</label>
-      <InputText id="postcode" v-model="formData.postcode" class="w-full" />
+      <InputText
+        id="postcode"
+        placeholder="Enter the postal code"
+        v-model="formData.postcode"
+        class="w-full"
+      />
     </div>
     <div class="flex justify-between pt-4">
       <Button

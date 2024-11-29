@@ -30,6 +30,9 @@
 .p-inputtext:enabled:focus {
   border-color: var(--primary-color-dark) !important;
 }
+.p-inputtext {
+  padding: 0.7rem !important;
+}
 .p-select:not(.p-disabled).p-focus {
   border-color: var(--primary-color-dark) !important;
 }
@@ -43,15 +46,15 @@
   background: var(--primary-color-light) !important;
   color: var(--primary-color-dark) !important;
 }
+.p-select-label {
+  padding: 0.7rem !important;
+}
 /* radio buttons styling */
 .radio {
-  font-family: inherit;
-  font-feature-settings: inherit;
   font-size: 1rem;
   color: var(--p-inputtext-color);
   background: var(--p-inputtext-background);
-  padding-block: var(--p-inputtext-padding-y);
-  padding-inline: var(--p-inputtext-padding-x);
+  padding: 0.7rem !important;
   border: 1px solid var(--p-inputtext-border-color);
   transition: background var(--p-inputtext-transition-duration),
     color var(--p-inputtext-transition-duration),
@@ -64,6 +67,12 @@
   box-shadow: var(--p-inputtext-shadow);
   cursor: pointer;
 }
+/* box shadow for all fields */
+.p-select,
+.radio,
+.p-inputtext {
+  box-shadow: 7px 7px 4px -4px rgba(230, 230, 230, 1) !important;
+}
 .p-radiobutton.p-variant-filled.p-radiobutton-checked .p-radiobutton-box {
   background: white !important;
 }
@@ -75,7 +84,14 @@
 }
 
 /* callendar / datepicker stylings */
-.p-datepicker-day-selected {
+.p-datepicker-day-selected,
+.p-datepicker-month-selected,
+.p-datepicker-year-selected {
   background: var(--primary-color-dark) !important;
   color: var(--p-datepicker-date-selected-color);
+}
+
+/* card */
+.p-card-body {
+  width: 100% !important;
 }

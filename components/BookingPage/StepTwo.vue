@@ -6,6 +6,7 @@
       >
       <InputText
         id="law-firm-name"
+        placeholder="Enter name of the Law firm"
         v-model="formData.lawFirmName"
         class="w-full"
       />
@@ -14,20 +15,29 @@
       <label for="property-cost">Property Cost</label>
       <InputText
         id="property-cost"
+        placeholder="Enter property cost"
         v-model="formData.propertyCost"
-        type="number"
+        type="text"
         class="w-full"
       />
     </div>
     <div>
       <label for="purchase-date">Purchase Date (month and year)</label>
-      <Calendar
-        id="purchase-date"
+
+      <DatePicker
         v-model="formData.purchaseDate"
+        placeholder="Enter purchase date"
+        showIcon
+        fluid
+        iconDisplay="input"
         class="w-full"
-        dateFormat="mm/yy"
-        showButtonBar
-      />
+        ><template #inputicon="slotProps">
+          <Icon
+            icon="majesticons:clock-line"
+            @click="slotProps.clickCallback"
+          />
+        </template>
+      </DatePicker>
     </div>
     <div class="flex justify-between pt-4">
       <Button
@@ -45,10 +55,9 @@
 </template>
 
 <script setup lang="ts">
-
 const formData = ref({
   lawFirmName: "",
-  propertyCost: "0",
+  propertyCost: "",
   purchaseDate: null,
 });
 </script>
