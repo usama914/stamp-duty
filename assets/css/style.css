@@ -25,3 +25,16 @@
   background-color: var(--primary-color-light) !important;
   color: black;
 }
+.p-inputtext:enabled:focus {
+  border-color: var(--primary-color-dark) !important;
+}
+.p-select:not(.p-disabled).p-focus {
+  border-color: var(--primary-color-dark) !important;
+}
+.p-select-option.p-select-option-selected.p-focus {
+  background: var(--primary-color-light) !important;
+  color: var(--primary-color-dark) !important;
+}
+.p-select-option.p-select-option-selected {
+  background: var(--primary-color-light) !important;
+}

@@ -16,17 +16,12 @@
    
    Using HTTPS:
    ```bash
-   git clone https://github.com/IOT-Expert/nuxt-skeleton.git
-   ```
-   
-   Or using SSH:
-   ```bash
-   git clone git@github.com:IOT-Expert/nuxt-skeleton.git
+   git clone https://github.com/usama914/stamp-duty
    ```
 
    Then, navigate to the project directory:
    ```bash
-   cd nuxt-skeleton
+   cd stamp-duty
    ```
 
 2. Install dependencies:

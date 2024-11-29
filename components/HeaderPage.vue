@@ -13,12 +13,22 @@
               'hidden md:inline': link.hideOnMobile,
             }"
           >
-            <button
-              @click="scrollToSection(link.id)"
-              class="font-Lexend text-primary-dark transition-colors duration-200"
-            >
-              {{ link.name }}
-            </button>
+            <template v-if="link.route">
+              <NuxtLink
+                :to="link.route"
+                class="font-Lexend text-primary-dark transition-colors duration-200"
+              >
+                {{ link.name }}
+              </NuxtLink>
+            </template>
+            <template v-else>
+              <button
+                @click="scrollToSection(link.id)"
+                class="font-Lexend text-primary-dark transition-colors duration-200"
+              >
+                {{ link.name }}
+              </button>
+            </template>
           </li>
         </ul>
       </nav>
@@ -30,7 +40,12 @@
 const links = [
   { name: "Can I make a claim?", id: "can-i-make-a-claim", hideOnMobile: true },
   { name: "FAQs", id: "faqs", hideOnMobile: true },
-  { name: "Start your claim", id: "start-your-claim", hideOnMobile: false },
+  {
+    name: "Start your claim",
+    id: "start-your-claim",
+    route: "/booking-form",
+    hideOnMobile: false,
+  },
 ];
 
 const scrollToSection = (id) => {
