@@ -1,20 +1,32 @@
 <template>
   <div
-    class="card flex justify-center items-center lg:max-w-screen-xl py-8 lg:py-16 px-8 mx-auto"
+    class="card flex justify-center items-center lg:max-w-screen-lg py-8 lg:py-16 px-8 mx-auto"
   >
     <Stepper v-model:value="currentStep" class="w-full" linear>
       <StepList>
         <Step v-slot="{ activateCallback }" :value="1">
-          <div @click="activateCallback">Type and Duration</div>
+          <div @click="activateCallback">
+            <span class="md:hidden">Details </span>
+            <span class="hidden md:block"> Type and Duration </span>
+          </div>
         </Step>
         <Step v-slot="{ activateCallback }" :value="2">
-          <div @click="activateCallback">Property Details</div>
+          <div @click="activateCallback">
+            <span class="md:hidden">Property </span>
+            <span class="hidden md:block">Property Details </span>
+          </div>
         </Step>
         <Step v-slot="{ activateCallback }" :value="3">
-          <div @click="activateCallback">Your Contact Details</div></Step
+          <div @click="activateCallback">
+            <span class="md:hidden">Contact </span>
+            <span class="hidden md:block"> Your Contact Details </span>
+          </div></Step
         >
         <Step v-slot="{ activateCallback }" :value="4">
-          <div @click="activateCallback">Your Signature</div></Step
+          <div @click="activateCallback">
+            <span class="md:hidden">Signature </span>
+            <span class="hidden md:block"> Your Signature </span>
+          </div></Step
         >
       </StepList>
       <StepPanels>
@@ -72,5 +84,14 @@ const currentStep = ref(1);
 :deep(.p-step-active .p-step-number) {
   border-color: var(--p-stepper-step-number-active-border-color);
   color: var(--primary-color-dark);
+}
+
+@media (max-width: 830px) {
+  :deep(.p-step-number) {
+    display: none !important;
+  }
+  :deep(.p-step-title) {
+    font-size: small;
+  }
 }
 </style>

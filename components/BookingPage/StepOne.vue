@@ -21,16 +21,31 @@
       />
     </div>
     <div>
-      <label for="probate-purchase"
+      <label for="repairs-required"
         >Did you purchase the property via probate?</label
       >
-      <Dropdown
-        id="probate-purchase"
-        :options="booleanOptions"
-         optionLabel="label"
-        v-model="formData.probatePurchase"
-        class="w-full"
-      />
+      <RadioButtonGroup name="ingredient" class="flex gap-4 w-full">
+        <div class="flex items-center gap-2 w-3/6">
+          <label
+            class="radio border w-full p-2 rounded flex items-center gap-2"
+            for="yes"
+          >
+            <RadioButton
+              inputId="yes"
+              value="yes "
+              class="radio-btn"
+            />Yes</label
+          >
+        </div>
+        <div class="flex items-center gap-2 w-3/6">
+          <label
+            class="radio border w-full p-2 rounded flex items-center gap-2"
+            for="no"
+          >
+            <RadioButton inputId="no" value="no" class="radio-btn" />No</label
+          >
+        </div>
+      </RadioButtonGroup>
     </div>
     <div>
       <label for="repairs-required"
@@ -38,6 +53,7 @@
       >
       <InputText
         id="repairs-required"
+        placeholder="roof leaks, cracks, mould, electrical issues, plumbing issues, heating problems, etc "
         v-model="formData.repairsRequired"
         class="w-full"
       />
@@ -64,10 +80,5 @@ const purchaseOptions = [
   { label: "Cash", value: "cash" },
   { label: "Mortgage", value: "mortgage" },
   { label: "Installments", value: "installments" },
-];
-
-const booleanOptions = [
-  { label: "Yes", value: true },
-  { label: "No", value: false },
 ];
 </script>

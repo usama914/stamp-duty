@@ -3,7 +3,9 @@
     <div
       class="w-full lg:max-w-screen-xl mx-auto flex justify-between items-center px-4 lg:px-8"
     >
-      <NuxtImg width="70" src="/images/stamp-logo.png" />
+      <NuxtLink to="/">
+        <NuxtImg width="70" src="/images/stamp-logo.png" />
+      </NuxtLink>
       <nav>
         <ul class="flex space-x-6 lg:space-x-10">
           <li

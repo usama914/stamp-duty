@@ -17,6 +17,7 @@
   cursor: pointer;
 }
 
+/* Default Buttons */
 .primary-btn {
   color: white;
   background-color: var(--primary-color-dark) !important;
@@ -25,16 +26,56 @@
   background-color: var(--primary-color-light) !important;
   color: black;
 }
+/* Input field styling */
 .p-inputtext:enabled:focus {
   border-color: var(--primary-color-dark) !important;
 }
 .p-select:not(.p-disabled).p-focus {
   border-color: var(--primary-color-dark) !important;
 }
+
+/* select Dropdown styling */
 .p-select-option.p-select-option-selected.p-focus {
   background: var(--primary-color-light) !important;
   color: var(--primary-color-dark) !important;
 }
 .p-select-option.p-select-option-selected {
   background: var(--primary-color-light) !important;
+  color: var(--primary-color-dark) !important;
+}
+/* radio buttons styling */
+.radio {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-size: 1rem;
+  color: var(--p-inputtext-color);
+  background: var(--p-inputtext-background);
+  padding-block: var(--p-inputtext-padding-y);
+  padding-inline: var(--p-inputtext-padding-x);
+  border: 1px solid var(--p-inputtext-border-color);
+  transition: background var(--p-inputtext-transition-duration),
+    color var(--p-inputtext-transition-duration),
+    border-color var(--p-inputtext-transition-duration),
+    outline-color var(--p-inputtext-transition-duration),
+    box-shadow var(--p-inputtext-transition-duration);
+  appearance: none;
+  border-radius: var(--p-inputtext-border-radius);
+  outline-color: transparent;
+  box-shadow: var(--p-inputtext-shadow);
+  cursor: pointer;
+}
+.p-radiobutton.p-variant-filled.p-radiobutton-checked .p-radiobutton-box {
+  background: white !important;
+}
+.p-radiobutton-checked .p-radiobutton-box .p-radiobutton-icon {
+  background: var(--primary-color-dark) !important;
+}
+.p-radiobutton-checked .p-radiobutton-box {
+  border-color: var(--primary-color-dark) !important;
+}
+
+/* callendar / datepicker stylings */
+.p-datepicker-day-selected {
+  background: var(--primary-color-dark) !important;
+  color: var(--p-datepicker-date-selected-color);
 }
