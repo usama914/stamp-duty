@@ -12,7 +12,7 @@
           >
             <RadioButton
               inputId="years-yes"
-              value="yes "
+              value="yes"
               class="radio-btn"
             />Yes</label
           >

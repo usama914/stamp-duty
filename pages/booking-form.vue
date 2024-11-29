@@ -101,9 +101,7 @@ const currentStep = ref(1);
   min-width: 30px;
 }
 :deep(.p-card) {
-  box-shadow: 10px 10px 5px 0px rgba(222, 222, 222, 1);
   border: 1px solid #dddddd;
-  /* box-shadow: 7px 7px 10px 4px rgba(230, 230, 230, 1); */
 }
 
 @media (max-width: 970px) {
