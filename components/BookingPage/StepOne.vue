@@ -33,7 +33,7 @@
     </div>
     <div>
       <label for="purchase-method">How did you purchase the property?</label>
-      <Dropdown
+      <Select 
         id="purchase-method"
         :options="purchaseOptions"
         placeholder="- - -"

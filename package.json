@@ -13,6 +13,7 @@
     "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
     "@primevue/themes": "^4.0.7",
+    "@selemondev/vue3-signature-pad": "^1.1.0",
     "nuxt": "^3.13.0",
     "primevue": "^4.0.7",
     "vue": "latest",

@@ -16,10 +16,12 @@
       :button-text="claimButtonText"
       :image-src="claimImageSrc"
     />
-    <FAQPage 
-    :title="faqTitle" 
-    :button-text="faqButtonText"
-    :description="faqDescription" />
+    <FAQPage
+      :title="faqTitle"
+      :button-text="faqButtonText"
+      :description="faqDescription"
+    />
+    <TestamonialComponent />
   </div>
 </template>
 
@@ -27,6 +29,7 @@
 import HeroComponent from "~/components/HomePage/HeroComponent.vue";
 import CanIMakeClaim from "~/components/HomePage/CanIMakeClaim.vue";
 import FAQPage from "~/components/HomePage/FAQPage.vue";
+import TestamonialComponent from "~/components/HomePage/TestamonialComponent.vue";
 
 // Data for Hero Component
 
@@ -75,5 +78,4 @@ const faqDescription = `
   and the process of making a claim.
 `;
 const faqButtonText = "Check if I can claim";
-
 </script>

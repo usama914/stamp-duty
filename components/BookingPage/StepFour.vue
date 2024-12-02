@@ -1,13 +1,16 @@
 <template>
-  <div class="flex flex-col  space-y-4">
+  <div class="flex flex-col space-y-4">
     <div>
       <label for="signature">Your Signature</label>
-      <InputText
-        id="signature"
-        v-model="signature"
-        class="w-full"
-        placeholder="Sign here..."
-      />
+      <!-- Dynamically loaded SignaturePad component -->
+      <Suspense>
+        <template #default>
+          <SignaturePad />
+        </template>
+        <template #fallback>
+          <div>Loading...</div>
+        </template>
+      </Suspense>
     </div>
     <div class="flex justify-between pt-4">
       <Button
@@ -21,5 +24,10 @@
 </template>
 
 <script setup lang="ts">
+// Dynamically import SignaturePad component
+const SignaturePad = defineAsyncComponent(() =>
+  import('./SignaturePad.vue')
+);
+
 const signature = ref("");
 </script>
