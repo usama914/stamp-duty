@@ -4,7 +4,7 @@
     class="bg-primary-dark mb-16 lg:mb-20 "
   >
     <div
-      class="w-full flex flex-col justify-between items-center lg:flex-row lg:max-w-screen-xl lg:gap-[5rem] lg:items-end md:space-y-0 space-y-6 mx-auto px-4 lg:px-8"
+      class="w-full flex flex-col justify-between items-center lg:flex-row lg:max-w-screen-xl lg:gap-[5rem] lg:items-end md:space-y-0 space-y-6 mx-auto px-6 lg:px-8"
     >
       <!-- Left Content -->
       <div
@@ -32,7 +32,7 @@
             </span>
           </li>
         </ul>
-        <NuxtLink class="secondary-btn w-full uppercase"> {{ buttonText }} </NuxtLink>
+        <NuxtLink :to="buttonLink" class="secondary-btn w-full uppercase"> {{ buttonText }} </NuxtLink>
       </div>
 
       <!-- Right Image -->
@@ -62,6 +62,10 @@ defineProps({
     required: true,
   },
   imageSrc: {
+    type: String,
+    required: true,
+  },
+  buttonLink: {
     type: String,
     required: true,
   },

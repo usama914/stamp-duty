@@ -13,7 +13,8 @@
     "@nuxt/fonts": "^0.8.0",
     "@nuxt/image": "^1.8.0",
     "@primevue/themes": "^4.0.7",
-    "@selemondev/vue3-signature-pad": "^1.1.0",
+    "libphonenumber-js": "^1.11.15",
+    "nodemailer": "^6.9.16",
     "nuxt": "^3.13.0",
     "primevue": "^4.0.7",
     "vue": "latest",
@@ -23,6 +24,7 @@
     "@iconify/vue": "^4.1.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@primevue/nuxt-module": "^4.0.7",
+    "@types/nodemailer": "^6.4.17",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.12"

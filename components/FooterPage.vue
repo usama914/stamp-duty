@@ -10,16 +10,14 @@
           </span>
         </li>
       </ul>
-      <ul class="flex gap-5 justify-start align-center flex-wrap mt-3">
+      <ul class="flex gap-2 justify-start align-center flex-wrap mt-3 text-sm">
         <li v-for="link in links" :key="link.name">
-          <a
-            :href="link.site"
+          <NuxtLink
+            :to="withUtmParams(link.site)"
             class="text-black font-bold underline hover:text-blue-600"
-            target="_blank"
-            rel="  "
           >
             {{ link.name }}
-          </a>
+          </NuxtLink>
         </li>
       </ul>
     </div>
@@ -27,10 +25,14 @@
 </template>
 
 <script setup lang="ts">
+import { useUtmTracking } from "~/composables/useUtmTracking";
+
+const { withUtmParams } = useUtmTracking();
+
 const points = ref<string[]>([
-  "© 2024 Swimby Carroll Anderson Ltd t/a Hardcastle Swim by is registered in England and Wales under company number: 15684524. ",
-  "VAT registration number 471786848 . ICO Registration Number ZB760262. ",
-  "Registered office: 76 King Street, Manchester, M2 4NH. ",
+  "© 2024 XIOTS Ltd t/a Stamp Duty Refund is registered in England and Wales under company number: 13719085. ",
+  "VAT registration number GB461809579. ICO Registration Number ZB416277. ",
+  "Registered office: Suite 1M Lions Drive, Shadsworth, Business Park, Blackburn, BB1 2QS. ",
   "A list of directors is available from Companies House.",
 ]);
 
@@ -38,22 +40,23 @@ interface Tab {
   name: string;
   site: string;
 }
+
 const links = ref<Tab[]>([
   {
     name: "Privacy policy",
-    site: "https://hardcastleswimby.co.uk/privacy",
+    site: "/privacy",
   },
   {
     name: "Cookie policy",
-    site: "https://hardcastleswimby.co.uk/cookies",
+    site: "/cookies",
   },
   {
     name: "Complaints policy",
-    site: "https://hardcastleswimby.co.uk/complaints",
+    site: "/complaints",
   },
   {
     name: "Terms of business",
-    site: "https://hardcastleswimby.co.uk/terms",
+    site: "/terms",
   },
 ]);
 </script>

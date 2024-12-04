@@ -3,11 +3,12 @@
     <div
       class="w-full lg:max-w-screen-xl mx-auto flex justify-between items-center px-4 lg:px-8"
     >
-      <NuxtLink to="/">
-        <NuxtImg width="70" src="/images/stamp-logo.png" />
+      <NuxtLink :to="homeLink" class="flex items-center space-x-2 text-primary-dark">
+        <Icon icon="fluent-mdl2:home-verify" style="width: 40px; height: 40px;" />
+        <span class="font-Lexend text-primary-dark text-xl">Stamp Duty Refund</span>
       </NuxtLink>
       <nav v-if="!showLinks">
-        <ul class="flex space-x-6 lg:space-x-10">
+        <ul class="space-x-6 lg:space-x-10 hidden md:flex">
           <li
             v-for="link in links"
             :key="link.id"
@@ -17,7 +18,7 @@
           >
             <template v-if="link.route">
               <NuxtLink
-                :to="link.route"
+                :to="withUtmParams(link.route)"
                 class="font-Lexend text-primary-dark transition-colors duration-200"
               >
                 {{ link.name }}
@@ -40,6 +41,9 @@
 
 <script setup>
 import { computed } from "vue";
+import { useUtmTracking } from "~/composables/useUtmTracking";
+
+const { withUtmParams } = useUtmTracking();
 
 // Define the links
 const links = [
@@ -64,4 +68,7 @@ const scrollToSection = (id) => {
 // Showing links only on the "/" route
 const route = useRoute();
 const showLinks = computed(() => route.path === "/booking-form");
+
+// Add UTM parameters to home link
+const homeLink = computed(() => withUtmParams('/'));
 </script>
